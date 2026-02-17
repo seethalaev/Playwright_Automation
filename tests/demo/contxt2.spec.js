@@ -4,29 +4,34 @@
 import { test, expect } from '@playwright/test';
 
 let context;
-test.beforeAll(async({browser}) =>
-{
-     context=await browser.newContext()
-     await context.tracing.start
+let page;
+test.beforeAll(async ({ browser }) => {
+    context = await browser.newContext()
+    await  context.tracing.start
         ({
             snapshots: true,
             screenshots: true
         })
+    page = await context.newPage()
 })
+
+test.afterAll(async () => {
+    await context.tracing.stop({ path: 'test3_trace.zip' })
+   
+})
+
 test('has title', async ({ page, context }) => {
 
-    
+
     await page.goto('https://playwright.dev/');
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Playwright/);
 
-     // Click the get started link.
+    // Click the get started link.
     await page.getByRole('link', { name: 'Get started' }).click();
 
-     // Expects page to have a heading with the name of Installation.
+    // Expects page to have a heading with the name of Installation.
     await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 
-    await context.tracing.stop({path: 'test1_trace.zip'})
 });
- 
