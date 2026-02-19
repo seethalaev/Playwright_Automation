@@ -10,3 +10,8 @@ test('Demo login1', async ({ page }) => {
 
 })
 
+test.only('Demo login 2',async({page}) => {
+  await page.goto('https://admin-demo.nopcommerce.com/login?returnUrl=%2Fadmin%2F') 
+  await page.pause()
+  
+});
