@@ -19,6 +19,7 @@ test('Assertion demo',async({page}) =>
         await expect(page.locator('text=The Kitchen')).toBeEnabled()
         //check text
         await expect (page.locator('text=The Kitchen')).toHaveText('The Kitchen')
-        
+        await expect(page.locator('text=The Kitchen')).not.toHaveText('The Kitchen')
+
    }
 )
