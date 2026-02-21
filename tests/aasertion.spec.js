@@ -1,12 +1,18 @@
 import test,{page,expect} from '@playwright/test'
 test('Assertion demo',async({page}) =>
    {
-         await page.goto('https://practicetestautomation.com/practice-test-login/')
-         await page.pause()
+          await page.goto('https://kitchen.applitools.com/')
+        await page.pause()
          //Asserion
-         //checkthe element is present
-        await expect(page.locator(' name: Username')).toHaveCount(1)
+         //checkthe unique element is present
+        await expect(page.locator('text=The Kitchen')).toHaveCount(1)
+       if(await page.$('text=The Kitchen'))
+       {
+         await page.locator('text=The Kitchen').click()
+       }
 
+       //check elemnt is hidden or visible
+        await expect (page.locator('text=The Kitchen')).toBeVisible()
    }
 
 )
