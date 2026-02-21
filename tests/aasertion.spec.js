@@ -13,6 +13,7 @@ test('Assertion demo',async({page}) =>
 
        //check elemnt is hidden or visible
         await expect (page.locator('text=The Kitchen')).toBeVisible()
+        await expect (page.locator('text=The Kitchen')).toBeHidden()
    }
 
 )
