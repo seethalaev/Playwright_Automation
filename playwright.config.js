@@ -5,7 +5,7 @@ module.exports = defineConfig({
 
   reporter: 'html',   // ✅ comma added here
 
-  retries: 1,         // ✅ needed for on-first-retry
+ // retries: 1,         // ✅ needed for on-first-retry
 
   use: {
     trace: 'on-first-retry',

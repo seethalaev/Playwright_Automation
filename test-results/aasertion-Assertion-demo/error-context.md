@@ -1,0 +1,49 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - img "Chefs with code ingredients" [ref=e7]
+    - heading "The Kitchen" [level=1] [ref=e8]
+    - paragraph [ref=e9]: A pantry full of web components that can be used for automated testing.
+    - generic [ref=e10]:
+      - link "Alert" [ref=e11] [cursor=pointer]:
+        - /url: /ingredients/alert
+        - heading "Alert" [level=3] [ref=e12]
+      - link "API" [ref=e13] [cursor=pointer]:
+        - /url: /ingredients/api
+        - heading "API" [level=3] [ref=e14]
+      - link "Canvas" [ref=e15] [cursor=pointer]:
+        - /url: /ingredients/canvas
+        - heading "Canvas" [level=3] [ref=e16]
+      - link "Cookie" [ref=e17] [cursor=pointer]:
+        - /url: /ingredients/cookie
+        - heading "Cookie" [level=3] [ref=e18]
+      - link "Drag & Drop" [ref=e19] [cursor=pointer]:
+        - /url: /ingredients/drag-and-drop
+        - heading "Drag & Drop" [level=3] [ref=e20]
+      - link "File Picker" [ref=e21] [cursor=pointer]:
+        - /url: /ingredients/file-picker
+        - heading "File Picker" [level=3] [ref=e22]
+      - link "iFrame" [ref=e23] [cursor=pointer]:
+        - /url: /ingredients/iframe
+        - heading "iFrame" [level=3] [ref=e24]
+      - link "Links" [ref=e25] [cursor=pointer]:
+        - /url: /ingredients/links
+        - heading "Links" [level=3] [ref=e26]
+      - link "Notification" [ref=e27] [cursor=pointer]:
+        - /url: /ingredients/notification
+        - heading "Notification" [level=3] [ref=e28]
+      - link "Select" [ref=e29] [cursor=pointer]:
+        - /url: /ingredients/select
+        - heading "Select" [level=3] [ref=e30]
+      - link "Table" [ref=e31] [cursor=pointer]:
+        - /url: /ingredients/table
+        - heading "Table" [level=3] [ref=e32]
+  - contentinfo [ref=e33]:
+    - paragraph [ref=e36]:
+      - link "Powered by Applitools" [ref=e37] [cursor=pointer]:
+        - /url: https://www.applitools.com
+        - text: Powered by
+        - img "Applitools" [ref=e38]
+```
