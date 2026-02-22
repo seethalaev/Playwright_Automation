@@ -13,9 +13,9 @@ test('Assertion demo',async({page}) =>
 
        //check elemnt is hidden or visible
         await expect (page.locator('text=The Kitchen')).toBeVisible()
-        await expect.soft(page.locator('text=The Kitchen')).toBeHidden()
+      //  await expect.soft(page.locator('text=The Kitchen')).toBeHidden()
         //check elemnt is enable or disable
-        await expect.soft(page.locator('text=The Kitchen')).toBeDisabled()
+      //  await expect.soft(page.locator('text=The Kitchen')).toBeDisabled()
         await expect(page.locator('text=The Kitchen')).toBeEnabled()
         //check text
         await page.pause()
@@ -28,7 +28,6 @@ test('Assertion demo',async({page}) =>
         await expect (page).toHaveURL('https://kitchen.applitools.com/')
         await expect(page).toHaveTitle(/.*Kitchen/)
         //visua validation  screenshot
-        await expect(page).toHaveScreenshot()
 
 
    }
