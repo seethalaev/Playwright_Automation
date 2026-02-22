@@ -9,5 +9,10 @@ module.exports = defineConfig({
 
   use: {
     trace: 'on-first-retry',
+    video:'on',
+    launchOptions:
+    {
+      slowMo:1000
+    },
   },
 });
