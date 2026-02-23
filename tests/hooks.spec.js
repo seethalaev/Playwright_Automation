@@ -1,44 +1,29 @@
 import { test, expect } from '@playwright/test'
-test('login', async ({ page }) => {
+
+test.beforeEach('login', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/')
 
     await page.locator('[data-test="username"]').fill('standard_user');
     await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('[data-test="login-button"]').click();
-    await page.close()
-})
+ })  
+
+
 test('home', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com/')
 
-    await page.locator('[data-test="username"]').fill('standard_user');
-    await page.locator('[data-test="password"]').fill('secret_sauce');
-    await page.locator('[data-test="login-button"]').click();
     await expect(page.locator('[data-test="item-4-img-link"]')).toBeVisible();
-
     await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     await expect(page.locator('[data-test="remove-sauce-labs-backpack"]')).toBeVisible();
-
     await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
     await page.getByText('Get your testing superhero on').click();
     await page.locator('[data-test="inventory-item-description"]').nth(2).click();
     await page.locator('[data-test="item-1-img-link"]').click();
     await expect(page.locator('[data-test="back-to-products"]')).toBeVisible();
-
     await page.locator('[data-test="add-to-cart"]').click();
-    await page.close()
+   
 })
-test.only('log-out', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com/')
-
-    await page.locator('[data-test="username"]').fill('standard_user');
-    await page.locator('[data-test="password"]').fill('secret_sauce');
-    await page.locator('[data-test="login-button"]').click();
-    await expect(page.locator('[data-test="item-4-img-link"]')).toBeVisible();
-
+test('log-out', async ({ page }) => {
     await page.getByRole('button', { name: 'Open Menu' }).click();
     await expect(page.locator('[data-test="inventory-sidebar-link"]')).toBeVisible();
-
-    await page.locator('[data-test="logout-sidebar-link"]').click();
-    await page.close()
-
+     await page.locator('[data-test="logout-sidebar-link"]').click();
 })
