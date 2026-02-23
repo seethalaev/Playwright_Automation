@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test'
+import { test, expect,chromium} from '@playwright/test'
 test('Slow motion and video recording demo', async () => {
     //lauch browser
-    const browser = await chromium.lauch({
+    const browser = await chromium.launch({
         slowMo: 500,
         headless: false
     })
