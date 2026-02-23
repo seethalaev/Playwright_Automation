@@ -12,7 +12,7 @@ test('Demo login1', async ({ page }) => {
 
 test.only('Demo login 2',async({page}) => {
   await page.goto('https://admin-demo.nopcommerce.com/login?returnUrl=%2Fadmin%2F') 
-  await page.pause()
+  //await page.pause()
   await page.getByRole('textbox', { name: 'Email:' }).click();
   await page.getByRole('textbox', { name: 'Email:' }).press('ControlOrMeta+a');
   await page.getByRole('textbox', { name: 'Email:' }).fill('admin@yourstore.com');
