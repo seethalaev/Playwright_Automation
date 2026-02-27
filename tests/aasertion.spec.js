@@ -21,6 +21,10 @@ test('Assertion demo',async({page}) =>
         await page.pause()
         await expect (page.locator('text=The Kitchen')).toHaveText('The Kitchen')
         await expect(page.locator('text=The Kitchen')).not.toHaveText('The Kitchen')
-       
+        //check attribute value
+        await expect(page.locator('text=The Kitchen')).toHaveAttribute('class',/.*css-dpmy2a/)
+        await expect (page.locator('text=The Kitchen')).toHaveClass(/.*css-dpmy2a/)
+      
+
    }
 )
