@@ -11,4 +11,6 @@ test('Assertion demo',async({page}) =>
          await page.locator('text=The Kitchen').click()
        }
 
-       
+       //check elemnt is hidden or visible
+        await expect (page.locator('text=The Kitchen')).toBeVisible()
+      
