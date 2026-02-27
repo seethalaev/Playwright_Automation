@@ -29,7 +29,7 @@ test('Assertion demo',async({page}) =>
         await expect(page).toHaveTitle(/.*Kitchen/)
         //visua validation  screenshot
 
-        
+        await expect(page).toHaveScreenshot()
 
    }
 )
