@@ -24,7 +24,12 @@ test('Assertion demo',async({page}) =>
         //check attribute value
         await expect(page.locator('text=The Kitchen')).toHaveAttribute('class',/.*css-dpmy2a/)
         await expect (page.locator('text=The Kitchen')).toHaveClass(/.*css-dpmy2a/)
-      
+       //check url
+        await expect (page).toHaveURL('https://kitchen.applitools.com/')
+        await expect(page).toHaveTitle(/.*Kitchen/)
+        //visua validation  screenshot
+
+        
 
    }
 )
