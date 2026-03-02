@@ -15,6 +15,9 @@ test('has title', async ({ page, context }) => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Playwright/);
 
+     // Click the get started link.
+    await page.getByRole('link', { name: 'Get started' }).click();
+
    
 });
  
