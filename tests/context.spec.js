@@ -21,6 +21,6 @@ test('has title', async ({ page, context }) => {
      // Expects page to have a heading with the name of Installation.
     await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 
-    a
+    await context.tracing.stop({path: 'test1_trace.zip'})
 });
  
