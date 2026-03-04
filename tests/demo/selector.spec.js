@@ -6,6 +6,7 @@ test('Selector demo',async({page})=>{
     //using any object property
     await page.click('id=user-name')
     await page.locator('id=user-name').fill('Seethal')
+    await page.locator('[id="user-name"]').fill('Anila')
    
 })
 
