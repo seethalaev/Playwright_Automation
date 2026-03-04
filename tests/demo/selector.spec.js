@@ -9,6 +9,8 @@ test('Selector demo',async({page})=>{
     await page.locator('[id="user-name"]').fill('Anila')
     //using css selector
     await page.locator('#login-button').click()
+    //using xpath
+    await page.locator('xpath=//input[@id="password"]').fill('user')
     
 })
 
