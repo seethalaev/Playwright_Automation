@@ -1,4 +1,4 @@
-import{test,expect} from '@playwright/test'
+import{test,expect, chromium} from '@playwright/test'
 test('Selector demo',async({page})=>{
     await page.goto('https://www.saucedemo.com/')
     await page.pause()
@@ -12,5 +12,9 @@ test('Selector demo',async({page})=>{
     //using xpath
     await page.locator('xpath=//input[@id="password"]').fill('user')
     
-})
+    await page.locator('//input[@id="password"]').fill('Ravana')
+    
 
+   // await page.waitForSelector('',{timeout:5000})
+   // await expect(page.locator('').toHaveCount(1))    
+})
