@@ -15,7 +15,8 @@ test('Selector demo',async({page})=>{
     await page.locator('//input[@id="password"]').fill('Ravana')
     //using text
     await page.locator('text=LOGIN').click()
-    
+    //text is very complex and dynamic
+    await page.locator('input:has-text("LOGIN")').click()
 
    // await page.waitForSelector('',{timeout:5000})
    // await expect(page.locator('').toHaveCount(1))    
