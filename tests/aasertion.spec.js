@@ -6,4 +6,11 @@ test('Assertion demo',async({page}) =>
          //Asserion
          //checkthe unique element is present
         await expect(page.locator('text=The Kitchen')).toHaveCount(1)
-       
+       if(await page.$('text=The Kitchen'))
+       {
+         await page.locator('text=The Kitchen').click()
+       }
+
+       //check elemnt is hidden or visible
+        await expect (page.locator('text=The Kitchen')).toBeVisible()
+      
