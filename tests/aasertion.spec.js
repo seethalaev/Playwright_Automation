@@ -15,5 +15,8 @@ test('Assertion demo',async({page}) =>
         await expect (page.locator('text=The Kitchen')).toBeVisible()
         //await expect.soft(page.locator('text=The Kitchen')).toBeHidden()
         //check elemnt is enable or disable
-        await expect.soft(page.locator('text=The Kitchen')).toBeDisabled()
+        //await expect.soft(page.locator('text=The Kitchen')).toBeDisabled()
+        await expect(page.locator('text=The Kitchen')).toBeEnabled()
        
+ }
+)
