@@ -26,6 +26,7 @@ test.describe('All my tests', () => {
     })
     test('log-out', async ({ page }) => {
         await page.getByRole('button', { name: 'Open Menu' }).click();
-       
+        await expect(page.locator('[data-test="inventory-sidebar-link"]')).toBeVisible();
+        await page.locator('[data-test="logout-sidebar-link"]').click();
     })
 })
