@@ -13,3 +13,5 @@ test('Navigation commands',async({page})=>{
     //Current page url
     page.url()
     //Current page title
+    page.title()
+})
