@@ -9,4 +9,7 @@ test('Navigation commands',async({page})=>{
     //Reload current page
     page.reload()
     //Wait for navigation to complete
-    
+    page.waitForURL(url)
+    //Current page url
+    page.url()
+    //Current page title
