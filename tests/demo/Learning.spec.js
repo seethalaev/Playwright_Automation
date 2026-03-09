@@ -15,3 +15,12 @@ test('Navigation commands',async({page})=>{
     //Current page title
     page.title()
 })
+test('Locators',async({page})=>{
+
+})
+test('Actions',async({page})=>{
+    //click an element
+    page.locator('').click()
+    //double click element
+    page.locator('').dblclick()
+   
