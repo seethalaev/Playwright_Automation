@@ -23,4 +23,5 @@ test('Actions',async({page})=>{
     page.locator('').click()
     //double click element
     page.locator('').dblclick()
+    //clear field type text
    
