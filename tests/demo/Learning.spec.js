@@ -24,4 +24,8 @@ test('Actions',async({page})=>{
     //double click element
     page.locator('').dblclick()
     //clear field type text
+    page.locator('').fill('text')
+    //Press keybord key
+    page.locator('').press('Enter')
+    //Toggle check box state
    
