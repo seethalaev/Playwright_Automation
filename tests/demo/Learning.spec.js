@@ -28,4 +28,6 @@ test('Actions',async({page})=>{
     //Press keybord key
     page.locator('').press('Enter')
     //Toggle check box state
-   
+    page.locator('').check() 
+    page.locator('').uncheck()
+ 
