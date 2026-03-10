@@ -30,4 +30,6 @@ test('Actions',async({page})=>{
     //Toggle check box state
     page.locator('').check() 
     page.locator('').uncheck()
- 
+    //Select dropdown option
+    page.locator('').selectOption;
+   
