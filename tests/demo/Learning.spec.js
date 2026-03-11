@@ -43,4 +43,8 @@ test('Assertions',async({page})=>{
     expect (page.locator('')).toBeVisible()
     //element is not visible
     expect (page.locator('')).toBeHidden()
-  
+    //element is enabled
+    expect (page.locator('')).toBeEnabled()
+    //element is disabled
+    expect (page.locator('')).toBeDisabled()
+    //exact text match
