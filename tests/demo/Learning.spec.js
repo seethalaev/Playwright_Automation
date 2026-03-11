@@ -34,4 +34,8 @@ test('Actions',async({page})=>{
     page.locator('').selectOption;
     //Hover mouse on event
     page.locator('').hover()
-   
+    //Drage elemtn to target
+    page.locator('').dragTo(target)
+
+})
+test('Assertions',async({page})=>{
