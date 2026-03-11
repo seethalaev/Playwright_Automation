@@ -32,4 +32,6 @@ test('Actions',async({page})=>{
     page.locator('').uncheck()
     //Select dropdown option
     page.locator('').selectOption;
+    //Hover mouse on event
+    page.locator('').hover()
    
