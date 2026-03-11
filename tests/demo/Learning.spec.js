@@ -39,3 +39,8 @@ test('Actions',async({page})=>{
 
 })
 test('Assertions',async({page})=>{
+    //element visible on page
+    expect (page.locator('')).toBeVisible()
+    //element is not visible
+    expect (page.locator('')).toBeHidden()
+  
