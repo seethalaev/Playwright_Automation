@@ -48,3 +48,12 @@ test('Assertions',async({page})=>{
     //element is disabled
     expect (page.locator('')).toBeDisabled()
     //exact text match
+
+
+
+    
+    expect(page.locator('')).toHaveText('')
+    //Number of matching elements
+    expect(page.locator('')).toHaveCount(n)
+    //css class matching pattern
+   
