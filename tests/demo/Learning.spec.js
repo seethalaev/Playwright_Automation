@@ -60,3 +60,8 @@ test('Assertions',async({page})=>{
     //Page title mactches
     expect(page).toHaveTitle('Tile')
 
+})
+test('Api testing',async({page})=>{
+    //Send get request
+ page.request.get(url)
+    //Send post with body
