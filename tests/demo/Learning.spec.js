@@ -56,3 +56,7 @@ test('Assertions',async({page})=>{
     expect(page.locator('')).toHaveClass()
     //Page title mactches
     expect(page).toHaveTitle('Tile')
+
+})
+test('Api testing',async({page})=>{
+    //Send get request
