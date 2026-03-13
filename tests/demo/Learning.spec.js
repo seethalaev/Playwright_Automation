@@ -49,21 +49,6 @@ test('Assertions',async({page})=>{
     expect (page.locator('')).toBeDisabled()
     //exact text match
 
-
-
-    
-    expect(page.locator('')).toHaveText('')
+ expect(page.locator('')).toHaveText('')
     //Number of matching elements
-    expect(page.locator('')).toHaveCount(n)
-    //css class matching pattern
-    expect(page.locator('')).toHaveClass()
-    //Page title mactches
-    expect(page).toHaveTitle('Tile')
-
-})
-test('Api testing',async({page})=>{
-    //Send get request
- page.request.get(url)
-    //Send post with body
- page.request.post(url,{data:{}})
-    //Send put with body
+    
