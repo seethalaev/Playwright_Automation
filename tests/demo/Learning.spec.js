@@ -51,4 +51,6 @@ test('Assertions',async({page})=>{
 
  expect(page.locator('')).toHaveText('')
     //Number of matching elements
+    expect(page.locator('')).toHaveCount(n)
+    //css class matching pattern
     
