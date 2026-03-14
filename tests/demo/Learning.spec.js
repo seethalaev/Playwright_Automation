@@ -63,3 +63,6 @@ test('Api testing',async({page})=>{
  page.request.get(url)
     //Send post with body
  page.request.post(url,{data:{}})
+    //Send put with body
+page.request.put(url,{data:{}})
+ 
