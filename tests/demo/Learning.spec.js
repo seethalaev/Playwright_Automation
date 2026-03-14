@@ -65,4 +65,5 @@ test('Api testing',async({page})=>{
  page.request.post(url,{data:{}})
     //Send put with body
 page.request.put(url,{data:{}})
- 
+    //Send delete request
+page.request.delete(url)
