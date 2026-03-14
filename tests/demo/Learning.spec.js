@@ -60,3 +60,5 @@ test('Assertions',async({page})=>{
 })
 test('Api testing',async({page})=>{
     //Send get request
+ page.request.get(url)
+ 
