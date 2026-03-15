@@ -73,3 +73,5 @@ page.request.delete(url)
 Response.status()
 //get http response
 Response.json()
+//get response header
+Response.header()
