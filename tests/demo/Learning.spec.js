@@ -67,3 +67,7 @@ test('Api testing',async({page})=>{
 page.request.put(url,{data:{}})
     //Send delete request
 page.request.delete(url)
+
+
+//get http status code
+Response.status()
