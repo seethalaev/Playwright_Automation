@@ -75,3 +75,7 @@ Response.status()
 Response.json()
 //get response header
 Response.header()
+//check status code is 2xx
+Response.ok()
+
+
