@@ -24,6 +24,6 @@ test('Slow motion and video recording demo', async () => {
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.getByRole('link', { name: 'Logout' }).click();
     //dispopse context when t is not needed
-   
+    await context.close()
 
 })
